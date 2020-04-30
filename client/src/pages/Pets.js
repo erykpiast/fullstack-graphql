@@ -9,11 +9,12 @@ import Loader from '../components/Loader'
 export default function Pets () {
   const [modal, setModal] = useState(false)
 
+  const [] = useQuery(query);
 
   const onSubmit = input => {
     setModal(false)
   }
-  
+
   if (modal) {
     return <NewPetModal onSubmit={onSubmit} onCancel={() => setModal(false)} />
   }
